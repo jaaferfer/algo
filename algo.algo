@@ -1,0 +1,28 @@
+ALGORITHM checkpoint
+VAR
+  s:=STRING;
+  X:= CHAR;
+  l,v,w := INTEGER;
+    
+BEGIN
+l:= 0;
+w:= 1;
+v:= 0;
+s:="";
+    repeat
+       write ('donnee un character') 
+   read (x)
+   s:=s+x;
+   l:= l + 1;
+   IF (x = ' ') THEN
+   w := w+1;
+   ELSE_IF ( x in [a, e, i, o, u, y, A, E, I, O, U, Y  ]) 
+            v:= v+1;
+        END_IF;
+    UNTIL (a = ".") 
+write ('your sentence is ',s);
+write ('the lenght of your sentence is ',l);
+write ('the number of words in your sentence is ',w);
+write ('The number of vowels in the sentence is ',v);
+
+END
